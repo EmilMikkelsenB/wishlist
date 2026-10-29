@@ -1,0 +1,9 @@
+services:
+  wishlist:
+    build: .
+    container_name: wishlist
+    restart: unless-stopped
+    environment:
+      NTFY_TOPIC: ${NTFY_TOPIC}
+    volumes:
+      - ./data:/data
